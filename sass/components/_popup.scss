@@ -19,14 +19,14 @@
   &:target &-content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-  }
+  }    
 
   &-content {
     @include absCenter;
     display: table;
     width: 75%;
     background: $color-white;
-    border-radius: 5px; 
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2rem 4rem $shadow-color;
     transform: translate(-50%, -50%) scale(0.5);
@@ -34,7 +34,7 @@
     transition: 0.4s 0.2s;
 
     @include respond(tab-land) {
-     display: block;
+      display: block;
     }
   }
 
@@ -68,7 +68,7 @@
       display: block;
       width: 100%;
       padding: 2rem;
-    } 
+    }
   }
 
   // popup close buuton
