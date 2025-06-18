@@ -1,0 +1,82 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem $shadow-color;
+  background: rgb($color-white, 0.6);
+  border-radius: 5px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+
+
+
+
+@include respond(tab-port){
+  width: 100%;
+  padding: 4rem;
+  padding-left: 7rem
+}
+
+
+@include respond(phone){
+  transform: skew(0); 
+}
+
+  &-shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-1rem) skewX(12deg);
+    position: relative;
+
+@include respond(phone){
+   transform: translateX(-1rem) skewX(0);
+}
+
+  }
+
+  &-image {
+    height: 100%;
+    transform: translateX(-3rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: filter 0.3s, transform 0.4s;
+  }
+
+  &:hover &-image {
+    filter: brightness(90%) blur(2px);
+    transform: scale(1);
+  }
+
+  &-caption {
+    font-size: 1.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &-text {
+    transform: skewX(12deg);
+    
+
+    @include respond(phone){
+        transform:skew(0);
+    }
+  }
+}

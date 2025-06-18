@@ -1,0 +1,36 @@
+.feature-box {
+  background: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 1.6rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1.5rem 4rem $shadow-color;
+  transition: transform 0.3s;
+
+  @include respond(tab-port){
+    padding: 2rem
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+
+  & i {
+    display: inline-block;
+    font-size: 6rem;
+    margin-bottom: 0.9rem;
+    background: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    background-clip: text;
+    color: transparent;
+
+
+  @include respond(tab-port){
+    margin-bottom: 0;
+  }
+
+  }
+}

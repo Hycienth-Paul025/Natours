@@ -1,0 +1,24 @@
+
+/* Header */
+
+.header {
+  height: 95vh;
+  background:  no-repeat
+      linear-gradient($color-primary-light, $color-primary-dark),
+    url(../img/city.jpg);
+  background-size: cover;
+  background-position: right bottom;
+ -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+
+
+@include respond(phone){
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+ 
+}
+
+
+}
+ 

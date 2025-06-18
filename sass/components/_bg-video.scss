@@ -1,0 +1,19 @@
+.bg-video {
+    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+
+// overflow: hidden; this can also make big image or video to fit the screen
+
+
+  &-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // this make big image or video fit to screen without overflowing
+  }
+}
