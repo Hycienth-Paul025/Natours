@@ -34,7 +34,8 @@
     transition: 0.4s 0.2s;
 
     @include respond(tab-land) {
-      display: block;
+      display: flex;
+      flex-direction: column-reverse;
     }
   }
 
@@ -48,7 +49,7 @@
   }
 
   &-image {
-    display: block;
+    display: block; 
     width: 100%;
 
     @include respond(tab-land) {
@@ -87,7 +88,9 @@
       transition: color 0.3s;
 
       @include respond(tab-land) {
-        font-size: 6rem;
+        font-size: 4rem;
+        top: 1rem;
+        right: 1.5rem;
       }
     }
 
