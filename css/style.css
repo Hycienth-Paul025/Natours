@@ -9,6 +9,7 @@
 
 1800px + :  Big Desktop Screen
 
+
 $breakpoint arguement choices:
 
 -phone
@@ -511,7 +512,7 @@ body {
   .composition-photo-p2 {
     top: -1rem;
     transform: scale(1.3);
-    z-index: 20;
+    z-index: 8;
   }
 }
 .composition-photo-p3 {
